@@ -74,13 +74,7 @@ function triangle(value1, type1, value2, type2) {
         return;
     }
 
-    console.log(`
-        a: ${triangleData.a.toFixed(6)}
-        b: ${triangleData.b.toFixed(6)}
-        c: ${triangleData.c.toFixed(6)}
-        alpha: ${triangleData.alpha.toFixed(6)}°
-        beta: ${triangleData.beta.toFixed(6)}°
-      `);
+    console.log(`a: ${triangleData.a.toFixed(6)}\nb: ${triangleData.b.toFixed(6)}\nc: ${triangleData.c.toFixed(6)}\nalpha: ${triangleData.alpha.toFixed(6)}°\nbeta: ${triangleData.beta.toFixed(6)}°`);
 
     document.getElementById("output").innerText = `
         a: ${triangleData.a.toFixed(6)}
