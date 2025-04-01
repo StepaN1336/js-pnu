@@ -3,8 +3,8 @@ function triangle(value1, type1, value2, type2) {
     const DEG_TO_RAD = Math.PI / 180;
     const RAD_TO_DEG = 180 / Math.PI;
 
-    if (value1 <= 0 || value2 <= 0) {
-        console.log("Усі значення повинні бути додатними числами.");
+    if (value1 <= 0 || value2 <= 0 || value1 > 1000000 || value2 > 1000000) {
+        console.log("Усі значення повинні бути додатними та не надто великими.");
         return;
     }
 
@@ -26,8 +26,8 @@ function triangle(value1, type1, value2, type2) {
         triangleData.a = value1;
         triangleData.b = value2;
         triangleData.c = Math.sqrt(triangleData.a ** 2 + triangleData.b ** 2);
-        triangleData.alpha = Math.atan(triangleData.a / triangleData.b) * RAD_TO_DEG;
-        triangleData.beta = Math.atan(triangleData.b / triangleData.a) * RAD_TO_DEG;
+        triangleData.alpha = Math.atan(triangleData.b / triangleData.a) * RAD_TO_DEG;
+        triangleData.beta = 90 - triangleData.alpha;
     } else if ((type1 === "leg" && type2 === "hypotenuse") || (type1 === "hypotenuse" && type2 === "leg")) {
         const leg = type1 === "leg" ? value1 : value2;
         const hypotenuse = type1 === "hypotenuse" ? value1 : value2;
@@ -46,9 +46,9 @@ function triangle(value1, type1, value2, type2) {
         const leg = type1 === "leg" ? value1 : value2;
         const angleRad = (type1 === "adjacent angle" ? value1 : value2) * DEG_TO_RAD;
 
-        triangleData.a = leg;
+        triangleData.b = leg;
         triangleData.beta = angleRad * RAD_TO_DEG;
-        triangleData.b = triangleData.a / Math.tan(angleRad);
+        triangleData.a = triangleData.b * Math.tan(angleRad);
         triangleData.c = Math.sqrt(triangleData.a ** 2 + triangleData.b ** 2);
         triangleData.alpha = 90 - triangleData.beta;
     } else if ((type1 === "leg" && type2 === "opposite angle") || (type1 === "opposite angle" && type2 === "leg")) {
@@ -57,7 +57,7 @@ function triangle(value1, type1, value2, type2) {
 
         triangleData.a = leg;
         triangleData.alpha = angleRad * RAD_TO_DEG;
-        triangleData.b = triangleData.a * Math.tan(angleRad);
+        triangleData.b = triangleData.a / Math.tan(angleRad);
         triangleData.c = Math.sqrt(triangleData.a ** 2 + triangleData.b ** 2);
         triangleData.beta = 90 - triangleData.alpha;
     } else if ((type1 === "hypotenuse" && type2 === "angle") || (type1 === "angle" && type2 === "hypotenuse")) {
@@ -67,7 +67,7 @@ function triangle(value1, type1, value2, type2) {
         triangleData.c = hypotenuse;
         triangleData.alpha = angleRad * RAD_TO_DEG;
         triangleData.a = triangleData.c * Math.sin(angleRad);
-        triangleData.b = Math.sqrt(triangleData.c ** 2 - triangleData.a ** 2);
+        triangleData.b = triangleData.c * Math.cos(angleRad);
         triangleData.beta = 90 - triangleData.alpha;
     } else {
         console.log("Неправильна комбінація типів.");
@@ -75,7 +75,7 @@ function triangle(value1, type1, value2, type2) {
     }
 
     console.log(`a: ${triangleData.a.toFixed(6)}\nb: ${triangleData.b.toFixed(6)}\nc: ${triangleData.c.toFixed(6)}\nalpha: ${triangleData.alpha.toFixed(6)}°\nbeta: ${triangleData.beta.toFixed(6)}°`);
-
+}
     document.getElementById("output").innerText = `
         a: ${triangleData.a.toFixed(6)}
         b: ${triangleData.b.toFixed(6)}
