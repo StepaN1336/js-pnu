@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Osu! on JS, shock!</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="start-screen active">
+        <h1>Вибери налаштування гри</h1>
+
+        <div>
+            <h2>Колір квадрата:</h2>
+            <button class="color-button" onclick="selectColor(this, 'green')">Зелений</button>
+            <button class="color-button" onclick="selectColor(this, 'red')">Червоний</button>
+            <button class="color-button" onclick="selectColor(this, 'black')">Чорний</button>
+        </div>
+
+        <div>
+            <h2>Рівень складності:</h2>
+            <button onclick="startGame('easy')">Легкий</button>
+            <button onclick="startGame('medium')">Середній</button>
+            <button onclick="startGame('hard')">Важкий</button>
+        </div>
+    </div>
+
+    <div class="game-screen">
+        <div class="square"></div>
+        <div class="approach-square"></div>
+        <div class="score">Очки: 0</div>
+        <div class="timer">0</div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
