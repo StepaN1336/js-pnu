@@ -5,6 +5,7 @@ let currentMoves = 0;
 let lastMove = null;
 let timer = 0;
 let timerInterval;
+let winTriggered = false;
 const gridSize = 5;
 
 const grid = document.getElementById("grid");
@@ -104,6 +105,7 @@ function checkWin() {
         row.every(cell => !cell.classList.contains("on"))
     );
     if (allOff) {
+        winTriggered = true;
         clearInterval(timerInterval);
         setTimeout(() => {
             alert(`You win in ${currentMoves} moves and ${timerSpan.textContent} time!`);
@@ -116,6 +118,7 @@ resetBtn.addEventListener("click", () => {
     currentMoves = 0;
     updateMovesDisplay();
     timer = 0;
+    if(winTriggered) timerInterval = setInterval(updateTimer, 1000);
 });
 
 newGameBtn.addEventListener("click", () => {
