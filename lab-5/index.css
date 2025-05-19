@@ -10,6 +10,14 @@ body {
     flex-direction: column;
 }
 
+.rating {
+    position: fixed;
+    top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    left: 10px;
+}
+
 .start-screen,
 .game-screen {
     display: none;
@@ -43,7 +51,7 @@ button {
 .approach-square {
     border: 2px solid blue;
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     pointer-events: none;
 }
 
@@ -61,4 +69,12 @@ button {
 
 .timer {
     right: 10px;
+}
+
+.combo {
+    position: fixed;
+    bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    left: 10px;
 }

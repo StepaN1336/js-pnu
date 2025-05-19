@@ -1,9 +1,11 @@
 const startScreen = document.querySelector('.start-screen');
+const rating = document.querySelector('.rating');
 const gameScreen = document.querySelector('.game-screen');
 const square = document.querySelector('.square');
 const approachSquare = document.querySelector('.approach-square');
 const scoreDisplay = document.querySelector('.score');
 const timerDisplay = document.querySelector('.timer');
+const comboDisplay = document.querySelector('.combo');
 const colorButtons = document.querySelectorAll('.color-button');
 const hitSound = new Audio('osu-hit-sound.mp3');
 const missSound = new Audio('osu-miss-sound.wav');
@@ -18,6 +20,20 @@ let approachSquareAnimationFrame;
 let timerInterval;
 let accurateClick = false;
 let isFirstBodyClick = true;
+let combo = 0;
+let maxCombo = 0;
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedRating = sessionStorage.getItem('ratingValue');
+
+    if (savedRating < 0) {
+        sessionStorage.setItem('ratingValue', 0);
+        rating.textContent = 'Рейтинг: 0';
+    } else if (savedRating !== null) {
+        rating.textContent = `Рейтинг: ${Number(savedRating).toFixed(2)}`;
+    } else rating.textContent = 'Рейтинг: 0';
+
+});
 
 function selectColor(button, selectedColor) {
     colorButtons.forEach(btn => {
@@ -33,7 +49,7 @@ function startGame(difficulty) {
         difficultySettings = {
             timer: 5,
             hitPoints: 1,
-            missPoints: -1,
+            missPoints: -20,
             size: 50,
             approachSquareSpeed: 1,
             moveDistance: 400
@@ -42,7 +58,7 @@ function startGame(difficulty) {
         difficultySettings = {
             timer: 3,
             hitPoints: 3,
-            missPoints: -5,
+            missPoints: -50,
             size: 40,
             approachSquareSpeed: 1.5,
             moveDistance: 800
@@ -51,7 +67,7 @@ function startGame(difficulty) {
         difficultySettings = {
             timer: 2,
             hitPoints: 5,
-            missPoints: -10,
+            missPoints: -100,
             size: 30,
             approachSquareSpeed: 2,
             moveDistance: 1200
@@ -123,8 +139,11 @@ function onSquareClick(e) {
     } else {
         updateScore(difficultySettings.hitPoints);
     }
+    combo++;
+    if (combo > maxCombo) maxCombo = combo;
     hitSound.play();
     hitSound.currentTime = 0;
+    updateCombo();
     moveSquareRandomly();
 }
 
@@ -134,20 +153,23 @@ function onBodyClick() {
         isFirstBodyClick = false;
         return;
     }
+    combo = 0;
     missSound.play();
     missSound.currentTime = 0;
+    updateCombo();
     updateScore(difficultySettings.missPoints);
 }
 
 function updateScore(change = 0) {
-    score += change;
+    if (combo === 0) score += change;
+    else score += change * combo;
     scoreDisplay.textContent = `Очки: ${score}`;
 }
 
 function updateTimer() {
     if (!gameActive) return;
     timeLeft--;
-    timerDisplay.textContent = timeLeft;
+    timerDisplay.textContent = `Залишилося часу: ${timeLeft}`;
     if (timeLeft <= 0) {
         endGame();
     }
@@ -155,10 +177,27 @@ function updateTimer() {
 
 function resetTimer() {
     timeLeft = difficultySettings.timer;
-    timerDisplay.textContent = timeLeft;
+    timerDisplay.textContent = `Залишилося часу: ${timeLeft}`;
+}
+
+function updateCombo() {
+    comboDisplay.textContent = `Комбо: ${combo}`;
 }
 
 function endGame() {
+    let newRating = 0;
+    const savedRating = sessionStorage.getItem('ratingValue');
+    
+    if (score < 0) newRating = score + maxCombo * difficultySettings.hitPoints;
+    else newRating = maxCombo * score * difficultySettings.hitPoints / 100;
+    
+    if (savedRating !== null) {
+        const updatedRating = parseFloat(savedRating) + newRating / (savedRating / 1000);
+        sessionStorage.setItem('ratingValue', updatedRating);
+    } else {
+        sessionStorage.setItem('ratingValue', newRating);
+    }
+
     gameActive = false;
     gameOverSound.play();
     clearInterval(timerInterval);
@@ -166,6 +205,7 @@ function endGame() {
     alert(`Гру завершено! Твій результат: ${score} очок.`);
     location.reload();
 }
+
 
 function resetApproachSquare() {
     approachSquare.style.width = '200px';
