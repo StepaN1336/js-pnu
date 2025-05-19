@@ -191,7 +191,7 @@ function endGame() {
     if (score < 0) newRating = score + maxCombo * difficultySettings.hitPoints;
     else newRating = maxCombo * score * difficultySettings.hitPoints / 100;
     
-    if (savedRating !== null) {
+    if (savedRating !== null && savedRating !==0) {
         const updatedRating = parseFloat(savedRating) + newRating / (savedRating / 1000);
         sessionStorage.setItem('ratingValue', updatedRating);
     } else {
