@@ -1,0 +1,33 @@
+{
+    "category": "Books",
+    "items": [
+        {
+            "id": 201,
+            "name": "1984",
+            "shortname": "1984",
+            "description": "Dystopian novel by George Orwell.",
+            "price": "15$"
+        },
+        {
+            "id": 202,
+            "name": "The Hobbit",
+            "shortname": "hobbit",
+            "description": "Fantasy classic by J.R.R. Tolkien.",
+            "price": "12$"
+        },
+        {
+            "id": 203,
+            "name": "Clean Code",
+            "shortname": "clean-code",
+            "description": "A handbook of agile software craftsmanship.",
+            "price": "35$"
+        },
+        {
+            "id": 204,
+            "name": "Atomic Habits",
+            "shortname": "atomic-habits",
+            "description": "Practical guide to building good habits.",
+            "price": "20$"
+        }
+    ]
+}

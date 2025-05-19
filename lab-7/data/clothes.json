@@ -1,0 +1,40 @@
+{
+    "category": "Clothes",
+    "items": [
+        {
+            "id": 301,
+            "name": "T-shirt",
+            "shortname": "tshirt",
+            "description": "100% cotton basic T-shirt.",
+            "price": "10$"
+        },
+        {
+            "id": 302,
+            "name": "Jeans",
+            "shortname": "jeans",
+            "description": "Slim fit blue jeans.",
+            "price": "30$"
+        },
+        {
+            "id": 303,
+            "name": "Jacket",
+            "shortname": "jacket",
+            "description": "Waterproof outdoor jacket.",
+            "price": "50$"
+        },
+        {
+            "id": 304,
+            "name": "Sneakers",
+            "shortname": "sneakers",
+            "description": "Comfortable sports shoes.",
+            "price": "45$"
+        },
+        {
+            "id": 305,
+            "name": "Cap",
+            "shortname": "cap",
+            "description": "Adjustable baseball cap.",
+            "price": "12$"
+        }
+    ]
+}

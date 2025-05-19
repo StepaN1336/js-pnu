@@ -1,0 +1,40 @@
+{
+    "category": "Electronics",
+    "items": [
+        {
+            "id": 101,
+            "name": "Smartphone",
+            "shortname": "smartphone",
+            "description": "High-end device with AMOLED display.",
+            "price": "599$"
+        },
+        {
+            "id": 102,
+            "name": "Laptop",
+            "shortname": "laptop",
+            "description": "14-inch ultrabook with Intel i7.",
+            "price": "899$"
+        },
+        {
+            "id": 103,
+            "name": "Headphones",
+            "shortname": "headphones",
+            "description": "Wireless and noise-cancelling.",
+            "price": "199$"
+        },
+        {
+            "id": 104,
+            "name": "Smartwatch",
+            "shortname": "smartwatch",
+            "description": "Tracks fitness and notifications.",
+            "price": "149$"
+        },
+        {
+            "id": 105,
+            "name": "Bluetooth Speaker",
+            "shortname": "speaker",
+            "description": "Portable speaker with bass boost.",
+            "price": "89$"
+        }
+    ]
+}

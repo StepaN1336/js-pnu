@@ -1,0 +1,47 @@
+{
+    "category": "Food",
+    "items": [
+        {
+            "id": 401,
+            "name": "Apple",
+            "shortname": "apple",
+            "description": "Fresh red apple, 1kg.",
+            "price": "2$"
+        },
+        {
+            "id": 402,
+            "name": "Bread",
+            "shortname": "bread",
+            "description": "Whole grain sandwich bread.",
+            "price": "1.5$"
+        },
+        {
+            "id": 403,
+            "name": "Cheese",
+            "shortname": "cheese",
+            "description": "Cheddar cheese block, 250g.",
+            "price": "3$"
+        },
+        {
+            "id": 404,
+            "name": "Milk",
+            "shortname": "milk",
+            "description": "1-liter whole milk.",
+            "price": "1$"
+        },
+        {
+            "id": 405,
+            "name": "Eggs",
+            "shortname": "eggs",
+            "description": "Pack of 10 organic eggs.",
+            "price": "2.5$"
+        },
+        {
+            "id": 406,
+            "name": "Chocolate",
+            "shortname": "chocolate",
+            "description": "Dark chocolate bar 70%.",
+            "price": "2$"
+        }
+    ]
+}

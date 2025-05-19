@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Electronics",
+        "shortname": "electronics",
+        "notes": ""
+    },
+    {
+        "id": 2,
+        "name": "Books",
+        "shortname": "books",
+        "notes": "Popular and classic literature"
+    },
+    {
+        "id": 3,
+        "name": "Clothes",
+        "shortname": "clothes",
+        "notes": ""
+    },
+    {
+        "id": 4,
+        "name": "Food",
+        "shortname": "food",
+        "notes": "Fresh and tasty products"
+    }
+]
