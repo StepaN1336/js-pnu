@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamburg Carousel!</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">LOGO</div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="burger burger-btn">&#9776;</button>
+        </div>
+    </header>
+
+    <div class="menu-overlay menu-overlay-block">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="carousel-container">
+            <div class="container">
+                <div class="carousel-track carousel-track-block">
+                    <img src="https://place-hold.it/400x400/ff9999/000?text=1" class="carousel-slide" />
+                    <img src="https://place-hold.it/400x400/99ccff/000?text=2" class="carousel-slide" />
+                    <img src="https://place-hold.it/400x400/ccffcc/000?text=3" class="carousel-slide" />
+                    <img src="https://place-hold.it/400x400/ffcc99/000?text=4" class="carousel-slide" />
+                    <img src="https://place-hold.it/400x400/d9b3ff/000?text=5" class="carousel-slide" />
+                </div>
+                <button class="carousel-btn prev prev-btn">&#10094;</button>
+                <button class="carousel-btn next next-btn">&#10095;</button>
+                <div class="dots dots-container"></div>
+            </div>
+        </section>
+
+        <section class="images-large">
+            <div class="container">
+                <img src="https://place-hold.it/300x200/f0f0f0/000?text=Large+1" />
+                <img src="https://place-hold.it/300x200/f0e68c/000?text=Large+2" />
+                <img src="https://place-hold.it/300x200/e6e6fa/000?text=Large+3" />
+            </div>
+        </section>
+
+        <section class="images-medium">
+            <div class="container">
+                <img src="https://place-hold.it/300x200/ffb6c1/000?text=Medium+1" />
+                <img src="https://place-hold.it/300x200/87cefa/000?text=Medium+2" />
+                <img src="https://place-hold.it/300x200/90ee90/000?text=Medium+3" />
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
