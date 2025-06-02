@@ -6,6 +6,12 @@ const navButtons = document.querySelectorAll('.header__navigation-link');
 let pageMap = {};
 let currentPage = null;
 
+headerBurger.addEventListener('click', () => {
+    headerBurger.classList.toggle('active');
+    headerMenu.classList.toggle('open');
+    body.classList.toggle('lock')
+});
+
 // Завантажуємо карту
 async function loadPageMap() {
     try {
