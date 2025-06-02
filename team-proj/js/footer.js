@@ -2,7 +2,7 @@ const modal = document.querySelector(".modal");
 const saveBtn = document.querySelector(".modal__save");
 const nameInput = document.querySelector(".modal__input");
 const footerBtn = document.querySelector(".footer__interaction-button");
-
+const textAppealContainer = document.querySelector('.modal__text-appeal');
 const greetingModal = document.querySelector(".modal--greeting");
 const greetingText = document.querySelector(".modal__text--greeting");
 const closeGreetingBtn = document.querySelector(".modal__save--close");
@@ -17,10 +17,12 @@ if (!savedName) {
 
 saveBtn.addEventListener("click", () => {
     const name = nameInput.value.trim();
-    if (name.length > 0) {
+    if (name.length > 0 && name.length <= 20) {
         localStorage.setItem("userName", name);
         modal.classList.remove("modal--visible");
         updateFooter(name);
+    } else if(name.length > 20) {
+        textAppealContainer.textContent = "Ваше ім'я занадто довге, спробуйте скоротити :("
     }
 });
 
