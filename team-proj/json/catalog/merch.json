@@ -1,25 +1,25 @@
 [
     {
         "id": 1,
-        "title": "Gamer Hoodie 'NOOBSLAYER'",
+        "title": "Геймерське Худі 'NOOBSLAYER'",
         "price": 49.99,
         "image": "images/catalog/production/hoodie.png"
     },
     {
         "id": 2,
-        "title": "Mousepad XXL 'ClickHead'",
+        "title": "Коврик для мишки XXL 'ClickHead'",
         "price": 24.99,
         "image": "images/catalog/production/mousepad.png"
     },
     {
         "id": 3,
-        "title": "Gamer Mug 'Gamer Fuel'",
+        "title": "Геймерська Кружка 'Gamer Fuel'",
         "price": 14.99,
         "image": "images/catalog/production/mug.png"
     },
     {
         "id": 4,
-        "title": "Gaming Socks 'Do Not Disturb'",
+        "title": "Геймерські Шкарпетки 'Do Not Disturb'",
         "price": 9.99,
         "image": "images/catalog/production/socks.png"
     }

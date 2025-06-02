@@ -1,37 +1,37 @@
 [
     {
         "id": 1,
-        "name": "Disks",
+        "name": "Диски",
         "shortname": "disks",
-        "notes": "Physical game copies",
+        "notes": "Фізичні копії ігор",
         "image": "images/catalog/categories/disks.png"
     },
     {
         "id": 2,
-        "name": "Devices",
+        "name": "Девайси",
         "shortname": "devices",
-        "notes": "Reliable mouses, keyboards, controllers etc.",
+        "notes": "Надійні клавіатури, мишки, навушники і т. п.",
         "image": "images/catalog/categories/devices.png"
     },
     {
         "id": 3,
-        "name": "Board Games",
+        "name": "Настільні ігри",
         "shortname": "board-games",
-        "notes": "Games for family, couples, kids",
+        "notes": "Ігри для пар, друзів та дітей",
         "image": "images/catalog/categories/board-games.jpg"
     },
     {
         "id": 4,
         "name": "Steam Keys",
         "shortname": "steam-keys",
-        "notes": "Exclusive steam keys",
+        "notes": "Ексклюзивні Steam ключі",
         "image": "images/catalog/categories/steam-keys.png"
     },
     {
         "id": 5,
-        "name": "Merch",
+        "name": "Мерч",
         "shortname": "merch",
-        "notes": "Our super awesome custom merch!",
+        "notes": "Наш супер крутий кастомний мерч!",
         "image": "images/catalog/categories/merch.png"
     }
 ]

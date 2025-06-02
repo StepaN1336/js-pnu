@@ -2,19 +2,19 @@
     <h1 class="blackjack__title">BlackJack</h1>
 
     <div class="blackjack__dealer">
-        <div class="blackjack__dealer-cards">Dealer Cards:</div>
-        <div class="blackjack__dealer-score">Dealer Score:</div>
+        <div class="blackjack__dealer-cards">Карти Дилера:</div>
+        <div class="blackjack__dealer-score">Очки Дилера:</div>
     </div>
 
     <div class="blackjack__player">
-        <div class="blackjack__player-cards">Player Cards:</div>
-        <div class="blackjack__player-score">Player Score:</div>
-        <button class="blackjack__button blackjack__button--get">Get A Card</button>
-        <button class="blackjack__button blackjack__button--pass">Pass</button>
-        <button class="blackjack__button blackjack__button--start">New Game</button>
+        <div class="blackjack__player-cards">Карти Гравця:</div>
+        <div class="blackjack__player-score">Очки Гравця:</div>
+        <button class="blackjack__button blackjack__button--get">Взяти Карту</button>
+        <button class="blackjack__button blackjack__button--pass">Пас</button>
+        <button class="blackjack__button blackjack__button--start">Нова Гра</button>
     </div>
 
-    <div class="blackjack__balance">Your Balance: 1000</div>
+    <div class="blackjack__balance">Ваш Баланс: 1000</div>
     <div class="blackjack__result"></div>
 
     <!-- Message Modal -->
@@ -28,23 +28,24 @@
     <!-- Disclaimer Modal -->
     <div class="blackjack__modal blackjack__modal--disclaimer">
         <div class="blackjack__modal-content">
-            <h2 class="blackjack__modal-title">Disclaimer</h2>
+            <h2 class="blackjack__modal-title">Дисклеймер</h2>
             <p class="blackjack__modal-description">
-                This game is a student project and not a real gambling application. We do not encourage gambling,
-                and we are not responsible for any gambling-related issues outside this game.
+                Ця гра є студентським проєктом, а не справжнім застосунком для азартних ігор. Ми не заохочуємо до гри в
+                азартні ігри та не несемо відповідальності за будь-які проблеми, пов'язані з азартними іграми, поза
+                межами цієї гри.
             </p>
-            <button class="blackjack__modal-button blackjack__modal--disclaimer-accept">I Understand</button>
+            <button class="blackjack__modal-button blackjack__modal--disclaimer-accept">Я розумію</button>
         </div>
     </div>
 
     <!-- Bet Modal -->
     <div class="blackjack__modal blackjack__modal--bet">
         <div class="blackjack__modal-content">
-            <h2 class="blackjack__modal-title">Place your bet!</h2>
+            <h2 class="blackjack__modal-title">Зробіть свою ставку!</h2>
             <input type="number" class="blackjack__bet-input" min="1" placeholder="Enter amount..." />
             <div class="blackjack__bet-error"></div>
-            <button class="blackjack__modal-button blackjack__place-bet-btn">Place</button>
-            <button class="blackjack__modal-button blackjack__place-bet-cancel-btn">Cancel</button>
+            <button class="blackjack__modal-button blackjack__place-bet-btn">Поставити</button>
+            <button class="blackjack__modal-button blackjack__place-bet-cancel-btn">Відміна</button>
         </div>
     </div>
 </section>
