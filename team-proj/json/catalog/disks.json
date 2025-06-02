@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Elden Ring (PS5)",
+        "price": 59.99,
+        "image": "images/catalog/production/elden-ring.png"
+    },
+    {
+        "id": 2,
+        "title": "God of War Ragnarok (PS5)",
+        "price": 69.99,
+        "image": "images/catalog/production/god-of-war.png"
+    },
+    {
+        "id": 3,
+        "title": "The Legend of Zelda: TOTK (Switch)",
+        "price": 64.99,
+        "image": "images/catalog/production/zelda.png"
+    },
+    {
+        "id": 4,
+        "title": "Final Fantasy XVI (PS5)",
+        "price": 69.99,
+        "image": "images/catalog/production/ffxvi.png"
+    }
+]

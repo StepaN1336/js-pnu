@@ -1,0 +1,7 @@
+{
+    "main": [".index-page"],
+    "catalog": [".catalog"],
+    "memory-game": [".game-box"],
+    "blackjack": [".blackjack"],
+    "additional-info": [".additional-info-section"]
+}

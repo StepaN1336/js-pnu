@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Logitech G Pro X Superlight Mouse",
+        "price": 129.99,
+        "image": "images/catalog/production/logitech-mouse.png"
+    },
+    {
+        "id": 2,
+        "title": "Razer BlackWidow V3 Keyboard",
+        "price": 139.99,
+        "image": "images/catalog/production/razer-keyboard.png"
+    },
+    {
+        "id": 3,
+        "title": "Xbox Wireless Controller",
+        "price": 59.99,
+        "image": "images/catalog/production/xbox-controller.png"
+    },
+    {
+        "id": 4,
+        "title": "Sony Pulse 3D Headset",
+        "price": 99.99,
+        "image": "images/catalog/production/pulse3d.png"
+    }
+]

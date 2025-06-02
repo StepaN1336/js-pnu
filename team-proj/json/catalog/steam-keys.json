@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Cyberpunk 2077 Steam Key",
+        "price": 29.99,
+        "image": "images/catalog/categories/steam-keys.png"
+    },
+    {
+        "id": 2,
+        "title": "Red Dead Redemption 2 Steam Key",
+        "price": 39.99,
+        "image": "images/catalog/categories/steam-keys.png"
+    },
+    {
+        "id": 3,
+        "title": "Stardew Valley Steam Key",
+        "price": 11.99,
+        "image": "images/catalog/categories/steam-keys.png"
+    },
+    {
+        "id": 4,
+        "title": "Hades Steam Key",
+        "price": 19.99,
+        "image": "images/catalog/categories/steam-keys.png"
+    }
+]

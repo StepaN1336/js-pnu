@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Disks",
+        "shortname": "disks",
+        "notes": "Physical game copies",
+        "image": "images/catalog/categories/disks.png"
+    },
+    {
+        "id": 2,
+        "name": "Devices",
+        "shortname": "devices",
+        "notes": "Reliable mouses, keyboards, controllers etc.",
+        "image": "images/catalog/categories/devices.png"
+    },
+    {
+        "id": 3,
+        "name": "Board Games",
+        "shortname": "board-games",
+        "notes": "Games for family, couples, kids",
+        "image": "images/catalog/categories/board-games.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Steam Keys",
+        "shortname": "steam-keys",
+        "notes": "Exclusive steam keys",
+        "image": "images/catalog/categories/steam-keys.png"
+    },
+    {
+        "id": 5,
+        "name": "Merch",
+        "shortname": "merch",
+        "notes": "Our super awesome custom merch!",
+        "image": "images/catalog/categories/merch.png"
+    }
+]
