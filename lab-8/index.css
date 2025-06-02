@@ -59,8 +59,7 @@ header .container {
 
 .menu-overlay {
   display: none;
-  position: fixed;
-  top: 60px;
+  position: relative;
   left: 0;
   right: 0;
   background: #444;
