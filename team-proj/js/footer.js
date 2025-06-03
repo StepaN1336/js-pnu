@@ -1,4 +1,4 @@
-const modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal__ask-name");
 const saveBtn = document.querySelector(".modal__save");
 const nameInput = document.querySelector(".modal__input");
 const footerBtn = document.querySelector(".footer__interaction-button");
@@ -12,6 +12,7 @@ const savedName = localStorage.getItem("userName");
 if (!savedName) {
     modal.classList.add("modal--visible");
 } else {
+    modal.classList.remove("modal--visible");
     updateFooter(savedName);
 }
 
@@ -21,7 +22,7 @@ saveBtn.addEventListener("click", () => {
         localStorage.setItem("userName", name);
         modal.classList.remove("modal--visible");
         updateFooter(name);
-    } else if(name.length > 20) {
+    } else if (name.length > 20) {
         textAppealContainer.textContent = "Ваше ім'я занадто довге, спробуйте скоротити :("
     }
 });
@@ -32,8 +33,8 @@ closeGreetingBtn.addEventListener("click", () => {
 
 function updateFooter(name) {
     footerBtn.textContent = `Привіт, ${name}! Натисни, щоб дізнатись про новинки 🎁`;
-    footerBtn.addEventListener("click", () => {
+    footerBtn.onclick = () => {
         greetingText.textContent = `Раді бачити тебе, ${name}! Слідкуй за оновленнями 🛍️`;
         greetingModal.classList.add("modal--visible");
-    });
+    };
 }
